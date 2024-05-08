@@ -1,0 +1,98 @@
+{% extends 'birthday/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+{% load static %}
+    <!-- Contact Information -->
+    <section id="contact-info" class="py-5">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="row">
+                <!-- Contact Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">General Inquiries</h5>
+                            <p class="card-text">For general inquiries or questions about JackMu's birthday celebration, please contact us via email or phone.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Email: <a href="mailto:info@jackmu.com">info@jackmu.com</a></li>
+                            <li class="list-group-item">Phone: +123-456-7890</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social Media Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Connect on Social Media</h5>
+                            <p class="card-text">Stay updated with JackMu's birthday events and activities by following us on social media.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="https://www.facebook.com/mukisa.jack" class="btn btn-primary" target="_blank">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="btn btn-info">
+                                    <i class="bi bi-twitter"></i> Twitter
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="btn btn-danger">
+                                    <i class="bi bi-instagram"></i> Instagram
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map -->
+    <section id="map" class="py-5">
+        <div class="container">
+            <h2>Visit Us</h2>
+            <!-- Embed an interactive map using Google Maps API or another map service -->
+            <!-- Replace the iframe src with your own map embed code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.
+            468056976623!2d32.645311!3d0.44363569999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x177db50069ec1379%3A0x237c90af69ca8f3c!2sKiwologoma!5e0!3m2!1sen!2sug
+            !4v1649885369922!5m2!1sen!2sug" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form" class="py-5">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message:</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'birthday/base.html' %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+{% load static %}
+<!-- Featured Events -->
+<section id="featured-events" class="py-5">
+    <div class="container">
+        <h2 class="mb-4">Featured Events</h2>
+        
+        <!-- Event Cards -->
+        <div class="row">
+            <!-- Event Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'birthday/24.jpg' %}" class="card-img-top" alt="Event 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Welding Class</h5>
+                        <p class="card-text">JackMu attending a welding prac class.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal1">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'birthday/29.jpg' %}" class="card-img-top" alt="Event 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Moment of Laughter</h5>
+                        <p class="card-text">A light moment with his friends who happen to be his coursemates.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal2">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'birthday/21.jpg' %}" class="card-img-top" alt="Event 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Solar Electricity Demostration</h5>
+                        <p class="card-text">With the group building up a D-Lorenzo solar plant to have electricity.</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal3">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Event Cards -->
+        
+        <!-- More Events Button -->
+        <div class="text-center">
+            <a href="#" class="btn btn-outline-primary">View More Events</a>
+        </div>
+    </div>
+</section>
+
+<!-- Event Modals -->
+<div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModalLabel1">Welding Class</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>JackMu attending a welding practical class.</p>
+                <p>Location: [Location]</p>
+                <p>Date: [Date]</p>
+                <p>Time: [Time]</p>
+                <!-- Add more details as needed -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- Add additional buttons as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add more modals for other events -->
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'birthday/base.html' %}
+
+{% block title %}About JackMu{% endblock %}
+
+{% block content %}
+<style>
+    /* Custom CSS for About JackMu page */
+    .container {
+        margin-top: 50px;
+    }
+
+    h2 {
+        color: #4CAF50;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    /* Animation for paragraphs */
+    .fade-in {
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Custom styles for interactive elements */
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #388e3c;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2>About JackMu</h2>
+            <p class="fade-in">Welcome to JackMu's corner of the internet!</p>
+            <p class="fade-in">JackMu is a remarkable individual with a story that inspires us all. Born and raised in the vibrant city of Kampala, JackMu's journey has been one of resilience, determination, and unwavering faith.</p>
+            <p class="fade-in">From their humble beginnings in Nakawala 2 to the nurturing embrace of Ndama, JackMu's upbringing has shaped their character and instilled within them a deep sense of gratitude for life's blessings.</p>
+            <p class="fade-in">Guided by the wisdom of Rev. Bernard Babyebuza and the love of their family, JackMu has emerged as a beacon of hope and a force for good in their community. As a computer engineer, JackMu is passionate about leveraging technology to make a positive impact in the world.</p>
+            <p class="fade-in">But beyond their professional pursuits, JackMu is also a champion of humanity, dedicated to uplifting those in need and spreading kindness wherever they go. Their vision for the future is one of inclusivity, equality, and boundless opportunity for all.</p>
+            <p class="fade-in">Join us in celebrating JackMu's 27th birthday and honoring the incredible journey that has brought them to this moment. Here's to JackMu and the bright future that awaits!</p>
+            
+            <!-- Call to Action Button -->
+            <div class="text-center mt-5">
+                <a href="#" class="cta-button">Join the Celebration</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

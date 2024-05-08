@@ -1,0 +1,196 @@
+{% load static %}
+
+{% load birthday_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.0/font/bootstrap-icons.min.css">
+    <!-- SimpleLightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.0/simple-lightbox.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    
+
+    <!-- Add your CSS links here -->
+    <style>
+        body {
+            background-color: #f0e5cf; /* Birthday-themed background color */
+        }
+        /* Customize navbar and footer styles for JackMu's birthday */
+        /* Add more styles as needed */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'birthday/Jack.png' %}" alt="JackMu Logo" class="mr-2" style="width: 80px; height: 80px;">
+                    JackMu 27th Birthday
+                </a>                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'birthday:home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'birthday:about' %}">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'birthday:events' %}">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'birthday:gallery' %}">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'birthday:contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="bg-dark text-white">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{% url 'birthday:home' %}">Home</a></li>
+                    <li><a href="{% url 'birthday:about' %}">About</a></li>
+                    <li><a href="{% url 'birthday:events' %}">Events</a></li>
+                    <li><a href="{% url 'birthday:gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'birthday:contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Resources</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Follow Us</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/mukisa.jack"><i class="bi bi-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Newsletter</h5>
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="button" id="button-addon2"><a href=""></a>Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>JackMu Birthday Posts</h5>
+                <p>Please Enjoy Reading JackMu's posts.</p>
+                <p>He has {% total_posts %} posts written on his Birthday Platform.</p>
+                {% show_latest_posts 12 %}
+                <ul class="list-unstyled">
+                    {% for post in latest_posts %}
+                        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="col-md-6">
+                <h5>Who Define JackMu's Life.</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <div class="partner">
+                            <img src="{% static 'birthday/hea.jpeg' %}" alt="Contributor 1 Photo">
+                            <div class="partner-info">
+                                <h6 >Friend & Mentor: Mr.Ziine Narcicious</h6>
+                                <p>Mr.Ziine has been a constant source of inspiration and support to JackMu throughout his journey. From offering guidance in coding to providing moral support, John's contribution has been invaluable.</p>
+                                <a href="#" class="btn btn-primary">Connect with Mr.Ziine</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner">
+                            <img src="{% static 'birthday/heavenly.jpeg' %}" alt="grandparents">
+                            <div class="partner-info">
+                                <h6>GrandParents</h6>
+                                <p>After the loss of their parents, JackMu found solace and support in the nurturing embrace of their grandparents. Their wisdom, love, and guidance were instrumental in shaping JackMu's character and instilling important life lessons.</p>
+                                <a href="#" class="btn btn-primary">Celestial skies Holds the Great Spirits.</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="partner">
+                            <img src="{% static 'birthday/heavens.jpeg' %}" alt="Rev">
+                            <div class="partner-info">
+                                <h6>Rev Bernard Babyebuza</h6>
+                                <p>Reverend Babyebuza served as a mentor and guiding light in JackMu's life. His wisdom, counsel, and spiritual guidance helped JackMu navigate challenges and develop a strong sense of purpose and faith.</p>
+                                <a href="#" class="btn btn-primary">His Mentorship forever lives</a>
+                            </div>
+                        </div>
+                        <div class="partner">
+                            <img src="{% static 'birthday/he.jpeg' %}" alt="Contributor 3 Photo">
+                            <div class="partner-info">
+                                <h6>The Mu Family</h6>
+                                <p>The Mu family has been the backbone of JackMu's journey, providing unwavering love, encouragement, and belief in his dreams. Their support has been instrumental in his success.</p>
+                                <a href="#" class="btn btn-primary">Connect with the Mu Family</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Thank You</h5>
+                <p>Thank you for being a part of JackMu's 27th Birthday Celebration! We hope you had a fantastic time. Your support and presence made it truly special.</p>
+                <h5>Memorable Moments</h5>
+                <p>Check out our <a href="{% url 'birthday:gallery' %}">photo gallery</a> to relive the wonderful memories created during the celebration.</p>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p>&copy; 2024 JackMu 27th Birthday. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:info@jackmu.com">chief.jackson99@gmail.com</a> for any inquiries or feedback.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- SimpleLightbox JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.0/simple-lightbox.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#testimonialCarousel').carousel();
+    });
+</script>
+
+
+</body>
+</html>

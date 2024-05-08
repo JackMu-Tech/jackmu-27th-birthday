@@ -1,0 +1,25 @@
+{% extends 'birthday/base.html' %}
+
+{% block title %}Share a Post{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            {% if sent %}
+                <div class="alert alert-success" role="alert">
+                    <h2 class="alert-heading">E-mail successfully sent</h2>
+                    <p class="mb-0">"{{ post.title }}" was successfully sent to {{ form.cleaned_data.to }}.</p>
+                </div>
+            {% else %}
+                <h2 class="mb-4">Share "{{ post.title }}" by e-mail</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Send e-mail</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

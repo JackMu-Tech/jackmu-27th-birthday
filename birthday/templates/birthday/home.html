@@ -1,0 +1,631 @@
+{% extends 'birthday/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Welcome Message -->
+    <style>
+        /* Welcome Message Styling */
+        #welcome-message {
+            background-color: rgb(5, 95, 65);
+            padding: 50px 0;
+        }
+    
+        #welcome-message h2 {
+            color: aqua;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+    
+        #welcome-message p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        /* About JackMu Styling */
+        #about-jackmu {
+            padding: 50px 0;
+        }
+    
+        #about-jackmu h2 {
+            color: aquamarine;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #about-jackmu h5 {
+            color: chocolate;
+        }
+    
+        #about-jackmu p {
+            color: lightgreen;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    
+        #about-jackmu .row {
+            margin-top: 30px;
+        }
+    
+        #about-jackmu .col-md-4 {
+            margin-bottom: 30px;
+        }
+    
+        #about-jackmu h4 {
+            color: darkorchid;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #about-jackmu h4 {
+            color: darkcyan;
+        }
+    
+        #about-jackmu ul {
+            padding-left: 20px;
+        }
+    
+        #about-jackmu ul li {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+
+        #countdown-timer h2{
+            color: aquamarine;
+        }
+
+        #countdownModal p {
+            color: chartreuse;
+        }
+    
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+    
+    <section id="welcome-message" class="py-5 fade-in">
+        <div class="container text-center">
+            <h2>Welcome to JackMu's 27th Birthday Celebration!</h2>
+            <p>Today marks a special milestone in the life of JackMu, a remarkable individual whose journey has been filled with resilience, growth, and compassion. As we gather to celebrate this momentous occasion, we reflect on the challenges overcome, the triumphs achieved, and the countless blessings that have graced JackMu's path. From their humble beginnings in Nakawala 2 to the nurturing guidance of Rev. Bernard Babyebuza, JackMu's story is 
+                one of inspiration and determination, a testament to the power of perseverance and faith.</p>
+    
+            <p>On this joyous day, we come together to honor JackMu's unwavering spirit and unwavering commitment to making a positive impact in the world. Their kindness, generosity, and passion for humanity have touched the lives of many, leaving a lasting legacy of love and compassion. As we raise a toast to JackMu's 27th birthday, let us celebrate not only the years gone by but also the promise of a bright
+                 future filled with endless possibilities and opportunities for growth.</p>
+    
+            <p>To JackMu, we extend our heartfelt wishes for a birthday filled with love, 
+                laughter, and cherished memories. May this special day be a reminder of the incredible person 
+                you are and the indelible mark you've left on our hearts. Here's to another year of adventures, accomplishments, and moments that take your breath away. Happy 27th Birthday, JackMu!
+            </p>
+        </div>
+    </section>
+    
+    <!-- About JackMu -->
+    <section id="about-jackmu" class="py-5 fade-in">
+        <div class="container">
+            <h2>About JackMu</h2>
+            <p>JackMu is a computer engineer with a passion for technology and a heart for humanity. Born and raised in the vibrant city of Kampala, JackMu's journey has been one of resilience, determination, and unwavering faith.</p>
+            <p>Growing up in Nakawala 2, JackMu experienced the love and support of their parents. However, tragedy struck at a young age with the loss of their father. Despite the challenges, JackMu found solace and guidance in the nurturing embrace of their grandparents in Ndama.</p>
+            <p>Rev. Bernard Babyebuza played a pivotal role in JackMu's life, serving as a mentor and guiding light. Under his tutelage, JackMu grew spiritually and developed a strong sense of integrity and purpose.</p>
+            <p>JackMu's educational journey has been marked by dedication and perseverance. Despite facing obstacles, they excelled academically and pursued a career in computer engineering, driven by a passion for technology and innovation.</p>
+            <p>Beyond their professional pursuits, JackMu is deeply committed to philanthropy and humanitarian causes. They believe in using their skills and resources to make a positive impact in the lives of others, whether through volunteering, fundraising, or advocacy work.</p>
+            <p>JackMu enjoys exploring new cultures, engaging in outdoor activities, and immersing themselves in the world of literature and learning. They find joy in travel, adventure, and the pursuit of knowledge.</p>
+            <p>Looking ahead, JackMu envisions a future filled with opportunity, equality, and compassion. They are dedicated to making a difference in the world and leaving a legacy of kindness, generosity, and hope.</p>
+            <h5>Join us in celebrating JackMu's journey and honoring the incredible individual they are. Here's to JackMu and the limitless possibilities that lie ahead!</h5>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <h4>JackMu's Achievements</h4>
+                    <ul>
+                        <li>Knowledge and skills in computer engineering and other areas of Interest.</li>
+                        <li>Demostrated significant personal growth and resilience, overcomimg adversity and learning valuable along the way</li>
+                        <li>Made a positive impact in the lives of others, whether through volunteering or advocacy work.</li>
+                        <li>Served as a role model and mentor to others, sharing their knowledge and experiences to inspire and guid those around them</li>
+                        <li>Led to tangible contributions towards creating a more just, equitable, and compassionate world.</li>
+                        <li>JackMu's journey of self-discovery and growth serves as an achievement in itself, as they continue to evolve and strive towards becoming the best version of themselves.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>JackMu's Interests</h4>
+                    <ul>
+                        <li>Exploring new coding languages and frameworks.</li>
+                        <li>Dedicated to creating a more equitable and inclusive world for all.</li>
+                        <li>Passionate about promoting Education initiatives</li>
+                        <li>Loves supporting charitable causes and uplifting those in need.</li>
+                        <li>Enjoys exploring new cultures, cuisines and landscapes through travel.</li>
+                        <li>An avid reader and lifelong learner always seeking to expand his Knowledge and perspective through books, articles and online courses</li>
+                        <li>Loves spending time in nature and engaging in outdoor.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>JackMu's Personality Traits</h4>
+                    <ul>
+                        <li>Demonstrated resilience in the face of adversity, overcoming challenges and setbacks with strength and determination.</li>
+                        <li>Innovative and creative, seeking out new solutions and technologies to address complex problems.</li>
+                        <li>Strong spiritual foundation, finding solace and guidance in their faith and beliefs.</li>
+                        <li>Compassionate and empathetic towards others, showing kindness and support to those in need.</li>
+                        <li>Driven and goal-oriented, pursuing their dreams with unwavering determination and perseverance.</li>
+                        <li>Expresses gratitude for life's blessings and experiences, acknowledging the importance of appreciation and mindfulness.</li>
+                        <li>Open to new experiences and enjoys exploring the world around them, seeking adventure and excitement in their journey through life.</li>
+                        <li>Intelligent and curious, with a thirst for knowledge and a desire to learn and grow intellectually.</li>
+                        <li>Maintains a positive outlook on life, facing challenges with optimism and a belief in the inherent goodness of humanity.</li>
+                        <li>Cares deeply for their family, friends, and community, prioritizing the well-being and happiness of others.</li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+   <!-- Countdown Timer -->
+<section id="countdown-timer" class="py-5 text-center">
+    <div class="container">
+        <h2 style="color: aquamarine;">Countdown to JackMu's Birthday</h2>
+        <div id="countdown" class="countdown" style="color: aquamarine;"></div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#countdownModal" style="background-color: #007bff;">Set Reminder</button>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="countdownModal" tabindex="-1" aria-labelledby="countdownModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="countdownModalLabel" style="color: chocolate;">JackMu's Birthday Celebration</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="color: lawngreen;">
+                <p style="color: lawngreen;">Join us in celebrating JackMu's special day! We'll be gathering at <strong>The Venue</strong> for an evening filled with joy, laughter, and unforgettable memories.</p>
+                <p>Date: <strong>May 10, 2024</strong></p>
+                <p>Time: <strong>7:00 PM onwards</strong></p>
+                <p>Dress Code: <strong>Casual</strong></p>
+                <p>Don't miss out on the fun! Set a reminder now and mark your calendar.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Birthday Wishes -->
+<section id="birthday-wishes" class="py-5">
+    <div class="container">
+        <h2 class="mb-4" style="color: aquamarine;">Birthday Wishes</h2>
+        
+        <!-- Birthday Wishes Form -->
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h4 style="color: chocolate;">Leave Your Birthday Wish</h4>
+                <form id="birthday-wish-form">
+                    <div class="mb-3">
+                        <label style="color: aquamarine;" for="name" class="form-label">Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label style="color: aquamarine;" for="email" class="form-label">Your Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label style="color: aquamarine;" for="message" class="form-label">Your Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            
+            <!-- Guestbook -->
+            <div class="col-lg-6">
+                <h4 style="color: linen;">Guestbook</h4>
+                <div id="guestbook" class="card">
+                    <div class="card-body">
+                        <!-- Dynamic Birthday Wishes -->
+                        <div class="mb-3">
+                            <h5 class="card-title">Semakula Drake</h5>
+                            <p class="card-text">Happy Birthday, JackMu! Wishing you all the happiness and success in the world.</p>
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="card-title">Owembabazi Jasmine</h5>
+                            <p class="card-text">Happy Birthday! May this year bring you lots of joy and memorable moments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Birthday Wishes Form and Guestbook -->
+    </div>
+</section>
+
+<script>
+    // Function to fetch and display dynamic birthday wishes
+    async function fetchBirthdayWishes() {
+        try {
+            const response = await fetch('https://api.example.com/birthday-wishes');
+            const data = await response.json();
+            const guestbook = document.getElementById('guestbook');
+
+            // Clear existing birthday wishes
+            guestbook.innerHTML = '';
+
+            // Insert fetched birthday wishes into the guestbook
+            data.forEach(wish => {
+                const wishHtml = `
+                    <div class="mb-3">
+                        <h5 class="card-title">${wish.name}</h5>
+                        <p class="card-text">${wish.message}</p>
+                    </div>`;
+                guestbook.insertAdjacentHTML('beforeend', wishHtml);
+            });
+        } catch (error) {
+            console.error('Error fetching birthday wishes:', error);
+        }
+    }
+
+    // Event listener for form submission
+    document.getElementById('birthday-wish-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(this);
+
+        // Create object from form data
+        const wishData = {};
+        formData.forEach((value, key) => {
+            wishData[key] = value;
+        });
+
+        // Send birthday wish to server (Example: using fetch API)
+        try {
+            const response = await fetch('https://api.example.com/birthday-wishes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(wishData)
+            });
+
+            if (response.ok) {
+                // Clear form fields
+                this.reset();
+                
+                // Fetch and display updated birthday wishes
+                fetchBirthdayWishes();
+            } else {
+                console.error('Failed to submit birthday wish');
+            }
+        } catch (error) {
+            console.error('Error submitting birthday wish:', error);
+        }
+    });
+
+    // Fetch and display initial birthday wishes
+    fetchBirthdayWishes();
+</script>
+
+
+
+    <!-- Special Offers or Discounts -->
+    <section id="special-offers" class="py-5">
+        <div class="container">
+            <h2 class="mb-4" style="color: aquamarine;">Carol Bakery Special Offers On JackMu's Birthday</h2>
+            
+            <!-- Offer Cards -->
+            <div class="row">
+                <!-- Offer Card 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="{% static 'birthday/hg.jpeg' %}" class="card-img-top" alt="Offer 1">
+                        <div class="card-body">
+                            <h5 class="card-title">10% Off on Birthday Cakes</h5>
+                            <p class="card-text">Get a 10% discount on all birthday cakes for JackMu's birthday celebration.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer Card 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="{% static 'birthday/ch.jpeg' %}" class="card-img-top" alt="Offer 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Free Delivery</h5>
+                            <p class="card-text">Enjoy free delivery on all birthday party supplies orders for JackMu's celebration.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offer Card 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="{% static 'birthday/fgt.jpeg' %}" class="card-img-top" alt="Offer 3">
+                        <div class="card-body">
+                            <h5 class="card-title">50% Off on Party Decorations</h5>
+                            <p class="card-text">Get a flat 50% discount on all party decorations for JackMu's birthday bash.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Offer Cards -->
+        </div>
+    </section>
+
+
+    <!-- Social Media Integration -->
+    <!-- Social Media -->
+    <section id="social-media" class="py-5" style="background-image: url('birthday/bdbc.jpeg'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h2 class="mb-4 text-center" style="color: antiquewhite;">Connect with JackMu</h2>
+        
+        <!-- Social Media Links -->
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4 text-center">
+                <h4 style="color: aquamarine;">Follow Us</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
+                    <li><a href="#" class="text-decoration-none"><i class="bi bi-twitter me-2"></i>Twitter</a></li>
+                    <li><a href="#" class="text-decoration-none"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
+                    <li><a href="#" class="text-decoration-none"><i class="bi bi-linkedin me-2"></i>LinkedIn</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3 mb-4 text-center">
+                <h4 style="color: aquamarine;">Watch Us</h4>
+                <p style="color: antiquewhite;">Stay tuned for JackMu's birthday celebration videos on our YouTube channel!</p>
+            </div>
+            
+            <div class="col-md-3 mb-4 text-center">
+                <h4 style="color: aquamarine;">Share Your Moments</h4>
+                <p style="color: antiquewhite;">Share your favorite moments from JackMu's birthday celebration using #JackMuBirthday.</p>
+            </div>
+        </div>
+        <!-- End Social Media Links -->
+    </div>
+</section>
+
+
+
+    <!-- Testimonials -->
+<section id="testimonials" class="py-5">
+    <div class="container">
+        <h2 class="mb-4" style="color: aquamarine;">Testimonials</h2>
+
+        <!-- Testimonials Carousel -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Testimonial Item 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-text">"JackMu is such a kind and caring person. Wishing you a birthday filled with love and happiness!"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small> - Amanda Brown</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Testimonial Item 1 -->
+
+                <!-- Testimonial Item 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-text">"Happy Birthday, JackMu! You bring so much joy to everyone around you. May your special day be as wonderful as you are!"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small> - Michael Wilson</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Testimonial Item 2 -->
+
+                <!-- Add more carousel items for additional testimonials -->
+                <!-- Testimonial Item 3 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-text">"JackMu, you're truly one of a kind. Wishing you a birthday filled with laughter, love, and all your heart desires!"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small> - Jennifer Lee</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Testimonial Item 3 -->
+
+                <!-- Testimonial Item 4 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-text">"Happy Birthday, JackMu! Your positivity and kindness brighten everyone's day. Here's to another amazing year ahead!"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small> - David Clark</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Testimonial Item 4 -->
+
+                <!-- Testimonial Item 5 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <p class="card-text">"JackMu, you're an incredible person inside and out. Wishing you a birthday filled with love, laughter, and unforgettable moments!"</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small> - Jessica Miller</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Testimonial Item 5 -->
+
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- End Carousel Controls -->
+        </div>
+        <!-- End Testimonials Carousel -->
+    </div>
+</section>
+
+
+
+
+
+
+   
+<section id="call-to-action" class="py-5">
+    <div class="container text-center">
+        <h2 style="color: aquamarine;">Ready to Celebrate?</h2>
+        <p style="color: lightsalmon;">Don't miss out on the fun! Join us in celebrating JackMu's birthday and make it a day to remember.</p>
+        <!-- RSVP Button -->
+        <a href="#" class="btn btn-primary btn-lg mb-4">RSVP Now</a>
+        <!-- Additional Call-to-Action Elements -->
+        <div>
+            <p style="color: rgb(214, 214, 214);">Can't attend? Send your best wishes!</p>
+            <!-- Contact Form for Wishes -->
+            <form id="wishes-form" class="needs-validation" novalidate>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Your Birthday Message" required></textarea>
+                            <div class="invalid-feedback">Please enter your birthday message.</div>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Send Wishes</button>
+                    </div>
+                </div>
+            </form>
+            <!-- Confirmation Message -->
+            <div id="confirmation-message" class="mt-3" style="display: none;">
+                <p style="color: aquamarine;">Your wishes have been sent! Thank you for celebrating with us.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Form submission handler
+    document.getElementById('wishes-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Check if form is valid
+        if (!this.checkValidity()) {
+            event.stopPropagation();
+            return;
+        }
+
+        // Simulate sending wishes (replace with actual submission code)
+        setTimeout(function() {
+            // Reset form
+            document.getElementById('wishes-form').reset();
+
+            // Show confirmation message
+            document.getElementById('confirmation-message').style.display = 'block';
+        }, 1000); // Simulate delay for better user experience
+    });
+</script>
+
+
+
+
+{% block extra_css %}
+    <style>
+        body {
+            background-image: url("{% static 'birthday/bgi.jpeg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+{% endblock extra_css %}
+
+{% block extra_js %}
+<script>
+    // Function to update the countdown timer
+    function updateCountdown() {
+        var birthdayDate = new Date(2024, 4, 10, 0, 0, 0); // May 10, 2024
+        var now = new Date(); // Current date and time
+        var distance = birthdayDate - now; // Calculate the difference in milliseconds
+
+        // Calculate remaining days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("countdown").innerHTML = "<div class='countdown-item'><span>" + days + "</span> Days</div>" +
+            "<div class='countdown-item' ><span>" + hours + "</span> Hours</div>" +
+            "<div class='countdown-item'><span>" + minutes + "</span> Minutes</div>" +
+            "<div class='countdown-item'><span>" + seconds + "</span> Seconds</div>";
+
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "<div class='countdown-item'>Happy Birthday, JackMu!</div>";
+        }
+    }
+
+    // Initial call to update the countdown
+    updateCountdown();
+
+    // Update the countdown every second
+    var countdownInterval = setInterval(updateCountdown, 1000);
+    
+</script>
+
+{% endblock %}
+
+{% endblock %}
