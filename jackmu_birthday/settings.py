@@ -124,7 +124,8 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = 'C:/Users/hp/Desktop/Projects_under_Opera/jackmu_birthday/staticfiles'
+STATIC_ROOT = '/home/JackMuTech/jackmu-27th-birthday/staticfiles'
+
 
 
 
